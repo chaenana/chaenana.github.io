@@ -84,11 +84,15 @@ html{--gn-height:40px}
     color:#fff;box-sizing:border-box}
 */
 #main .section{width:100%;height:calc(100vh);
-        color:#fff;box-sizing:border-box}
+        color:#fff;box-sizing:border-box;
+        padding-top:var(--gn-height);
+        margin-right:auto;margin-left:auto}
+/*
 #main .section:first-child
 {
     height:100vh;
     padding-top:var(--gn-height);}
+*/
 
 #main .section:nth-child(1){
 background-image: url(../img/the-hobbit_ktvFkabH.jpg);
@@ -107,6 +111,8 @@ background-size: cover;
     height:calc(100vh - var(--gn-height));
     margin-right:auto;margin-left:auto
 }
+
+
 
 #main .section .section-content h2{color:#fff;font-size:16px;line-height:22px}
 #global-footer{position:relative;width:100%;height:80px;background-color:#999}
@@ -159,3 +165,25 @@ background-size: cover;
     .notice::before{content:"~ 319px"}
     #global-nav{background-color:orange}
 }
+
+
+.show{
+    opacity: 0.4;
+}
+
+.transition {    
+    -webkit-transition: all 1s ease-in-out;
+      -moz-transition: all 1s ease-in-out;
+      -o-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out;
+  }
+  
+
+
+  .down {
+    top: 150px;
+  }
+  
+  .up {
+    top: 1800px;
+  }  
