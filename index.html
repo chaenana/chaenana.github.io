@@ -6,24 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
     <link rel="stylesheet" href="./css/style.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cantata+One|Nanum+Gothic|Playfair+Display+SC&display=swap" rel="stylesheet">
 <!--header-->
 <nav id="global-nav">
     <div class="gn-content">            
             <a href="#main_page"><img src="img/the-hobbit-logo-png-6.png" width="120px">  </a>
 
       <ul class="gn-list">
-           <!-- <embed src='Malukah - Misty Mountains - The Hobbit Cover.mp3' autostart='true' hidden='true' volume='0' loop='0'>-->
+           <embed src='Malukah - Misty Mountains - The Hobbit Cover.mp3' autostart='true' hidden='true' volume='0' loop='0'>
             <li>           
             <a href="#main_page"><span>Home</span></a></li><li>
             <a href="#second"><span>Story</span></a></li><li>
             <a href="#third"><span>Photo</span></a></li><li>
             <a href="#fourth"><span>Cast&crew</span></a></li><li>
             <a href="#fifth"><span>Trailers</span></a></li><li>
+            <a href="https://series.naver.com/tvstore/detail.nhn?mcode=97816" target="_blank"><button id="to_see">go to see</button></a></li>
+                  
             </ul>
+            
     </div>
 
 </nav>
@@ -33,22 +33,71 @@
 <!--main 페이지-->
 
     <section class="section" id="main_page">
+
         <div class="section-content">
+               <!-- <p id="cast">
+                Producer. Peter Jackson<br>
+                Writer. J.R.R.Tolkein<br><span id="cast_span">
+                Cast. Martin Freeman<br>
+                Cast. Ian Mckellen<br>
+                Cast. Richard Armitage</span>
+                </p>
+                -->
+            <img id="logo" src="img/Warner_Bros._1992_Shield.png" width="60px">
                 <div class="video-wrapper">
                     <p>watch this!</p>
                         <iframe width="250" height="150" src="https://www.youtube.com/embed/iLBP3s2_AjA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="scroll-down">
-                       <a href="#second">scroll down</a>
-                    </div>
+                <a href="#second" class="scroll-down">scroll down</a>
+                
         </div>
     </section>
+
+
+
+<!--명대사 부분-->
+
+    <section class="section" id="second">
+            <div class="section-content">
+
+                <div class="tex1">
+
+                <div class= "line"></div>
+                
+                <p>
+                    I'm going on an adventure!!
+                </p>
+            </div>
+                <div class="tex2"></div>
+
+                </div>
+            </section>
+
+
 
 <!--story 페이지 -->
 
     <section class="section" id="second">
         <div class="section-content">
-            <h2>Section 2</h2>
+            <h1>Synopsis 1 
+                <span id="unex">
+                    - The Hobbit: An Unexpected Journey, 2012</span>
+            </h1>
+
+            <p> 
+            호빗족 ‘빌보 배긴스’는 어느 날 갑자기 찾아온 회색의 마법사 ‘간달프’로부터 뜻밖의 제안을 받는다. <br>
+            오래 전 난쟁이족의 영토였지만 무시무시한 용 ‘스마우그’에게 빼앗겨 지금은 황무지로 <br>
+            변한 동쪽의 ‘외로운 산’ 에레보르 왕국을 되찾기 위해 함께 떠나자는 것. <br>
+            어쩔 수 없이 전설의 용사 ‘소린’이 이끄는 13명의 난쟁이족과 함께 고블린과 오르크, 흉악한 괴수 와르그,<br> 
+            마법사들과 마주쳐야 하는 위험 가득한 여정에 오른다. <br>
+            <br>
+            외로운 산에 가기 위해서 반드시 거쳐야 하는 고블린 동굴에서 일행과 떨어져 헤매던 빌보는 <br>
+            그의 일생을 뒤바꿔놓는 존재인 ‘골룸’과 마주치게 되고, <br>
+            골룸과의 수수께끼 대결 중에 대단한 힘을 지닌 골룸의 보물 ‘절대반지’를 얻게 된다. <br>
+            <br>
+            험난한 여행의 길에서 빌보는 그 동안 자신도 몰랐던 용기와 능력을 발견하지만, <br>
+            바로 그 절대반지로 인해 아직 짐작도 못할 중간계의 거대한 운명에 휘말리게 되는데… <br>
+            </p>
         </div>
     </section>
 
@@ -79,7 +128,7 @@
 </div>
 
 <!--to top-->
-<nav id="to-top-nav">
+<nav onclick="ScrollTop()" id="top-btn">
         <a href="#main_page">TOP</a>
     </nav>
 

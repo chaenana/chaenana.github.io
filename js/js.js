@@ -24,3 +24,35 @@ $(document).ready(function(){
       } // End if
     });
   });
+
+
+
+  //스크롤이 제일 위에 오면 옆에 있는 to top이 사라짐
+
+  document.addEventListener("scroll", yScroll);
+
+function yScroll() {
+
+  var yPos = window.pageYOffset;
+
+  if (yPos > 10) {
+    document.getElementById("top-btn").style.bottom = "10px";
+  } else {
+    document.getElementById("top-btn").style.bottom = "-60px";
+  }
+}
+
+function ScrollTop() {
+
+  var i = window.pageYOffset;
+
+  var intervalTimer = setInterval(function() {
+    if (i > 0) {
+      window.scrollTo(0, i);
+      i -= 15;
+    } else {
+      document.getElementById("top-btn").style.bottom = "-60px";
+      clearInterval(intervalTimer);
+    }
+  }, 0.5);
+}
