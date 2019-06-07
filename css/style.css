@@ -170,7 +170,6 @@ position: relative;
 */
 
 #main .section:nth-child(1) .section-content .video-wrapper{
-    font-size: 30px;
     position: absolute;
     bottom: 50px;
     left: 80px;
@@ -183,6 +182,7 @@ position: relative;
 #main .section:nth-child(1) .section-content iframe:hover {
     transform: scale(1.1);
   }
+
 .scroll-down{
     display: block;
     margin-left: auto;
@@ -218,35 +218,92 @@ position: relative;
 }
 
 
+
+#main .section:nth-child(1) .title {
+    font-size: 20px;
+    width: fit-content;
+    overflow: hidden;
+    position: relative;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: all 0.8s;}
+
+    #main .section:nth-child(1) .title:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      right: 0;
+      position: absolute;
+      transition: all 0.8s;
+      transition-delay: 1s;
+    }
+    #main .section:nth-child(1) p {
+      font-weight: bold;
+    }
+
+    #main .section:nth-child(1) .active {
+    transform: scaleX(1);}
+
+    #main .section:nth-child(1) .title:before {
+        width: 0%;
+    }
+
+/*
+    #main .section:nth-child(1) .slide-in {
+        opacity: 0;
+        transition: all .5s;
+      }
+      
+      #main .section:nth-child(1)  .align-left.slide-in {
+        transform:translateX(-30%) scale(0.95);
+      }
+      #main .section:nth-child(1)  .slide-in.active {
+        opacity: 1;
+        transform:translateX(0%) scale(1);
+      }
+      
+*/
+
+
+
+
+@keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(5em);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-up {
+    animation: fade-up 4s cubic-bezier(.05,.98,.17,.97) forwards;
+  }
+  
+    .story.fade-up {
+    opacity: 0;
+    animation-delay: 0.5s;
+  }
+
+
+
+
+
 #main .section:nth-child(2){
-    background-color: black;
-}
-
-#main .section:nth-child(2) .tex1{
-    width: 100%;
-    height:50%;
-    background-color : white;
-    color:black;
-}
-
-
-
-
-
-
-
-
-
-#main .section:nth-child(3){
-background-color: #111;
+background-image : url(../img/the_hobbit_the_battle_of_the_five_armies_7-wallpaper-1920x1080.jpg);
+background-size : cover;
+background-repeat : no-repeat;
 color: white;
 padding-left: 100px;
 padding-top: 90px;
 box-sizing: border-box;
 }
 
-#main .section:nth-child(3) h1{
-    border-bottom: white 1px solid;
+#main .section:nth-child(2) h1{
+    border-bottom: white 2px solid;
     padding-bottom: 20px;
     width: 200px;
     margin-bottom:30px;
@@ -254,21 +311,96 @@ box-sizing: border-box;
     line-height : 80%;
 }
 
-#main .section:nth-child(3) #unex{
+#main .section:nth-child(2) #unex{
     font-size : 15px;
 }
 
 
-#main .section:nth-child(3) p{
+#main .section:nth-child(2) p{
 font-family: 'Nanum Gothic', sans-serif;
 font-size : 12px;
 line-height : 30px;
 }
 
 
-#main .section:nth-child(4){background-color:#222}
-#main .section:nth-child(5){background-color:#333}
-#main .section:nth-child(6){background-color:#444}
+
+
+#main .section:nth-child(3){
+    background-image : url(../img/dragon-mythology-Smaug-The-Hobbit-The-Battle-of-the-Five-Armies-darkness-screenshot-563345-wallhere.com.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat : no-repeat;
+    color: white;
+    padding-left: 100px;
+    padding-top: 90px;
+    box-sizing: border-box;
+    }
+    
+    #main .section:nth-child(3) h1{
+        border-bottom: white 2px solid;
+        padding-bottom: 20px;
+        width: 200px;
+        margin-bottom:30px;
+        font-size : 30px;
+        line-height : 80%;
+    }
+    
+    #main .section:nth-child(3) #unex{
+        font-size : 15px;
+    }
+    
+    
+    #main .section:nth-child(3) p{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size : 12px;
+    line-height : 30px;
+    }
+    
+    
+
+
+    #main .section:nth-child(4){
+        background-image : url(../img/wind-The-Hobbit-destruction-The-Hobbit-The-Battle-of-the-Five-Armies-Azog-the-Defiler-darkness-167998-wallhere.com.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat : no-repeat;
+        color: white;
+        padding-left: 100px;
+        padding-top: 90px;
+        box-sizing: border-box;
+        }
+        
+        #main .section:nth-child(4) h1{
+            border-bottom: white 2px solid;
+            padding-bottom: 20px;
+            width: 200px;
+            margin-bottom:30px;
+            font-size : 30px;
+            line-height : 80%;
+        }
+        
+        #main .section:nth-child(4) #unex{
+            font-size : 15px;
+        }
+        
+        
+        #main .section:nth-child(4) p{
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size : 12px;
+        line-height : 30px;
+        }
+        
+        
+
+#main .section:nth-child(5){background-color:#222}
+#main .section:nth-child(6){background-color:#333}
+#main .section:nth-child(7){background-color:#444}
+
+
+
+
+
+
 
 
 #main .section .section-content
