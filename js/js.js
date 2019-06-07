@@ -66,47 +66,20 @@ $(function(){
 });
 
 
+//옆에서 스르륵 나타남
 
-/*이미지 스르륵*/
-/*
-function debounce(func, wait = 20, immediate = true) {
-  var timeout;
 
-  return function() {
-    var context = this, args = arguments;
-
-    var later = function() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-
-    if (callNow) func.apply(context, args);
-  };
-};
-
-const sliderImages = document.querySelectorAll('.slide-in');
-
-function checkSlide(e) {
-  sliderImages.forEach(sliderImage => {
-    const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
-    const imageBottom = sliderImage.offsetTop + sliderImage.height;
-    const isHalfShown = slideInAt > sliderImage.offsetTop;
-    const isNotScrolledPast = window.scrollY < imageBottom;
-
-    if(isHalfShown && isNotScrolledPast) {
-      sliderImage.classList.add('active');
-    } else {
-      sliderImage.classList.remove('active');
-    }
+$(document).ready(function() {
+  $(window).scroll( function(){
+      $('.fade-up').each( function(i){
+          
+          var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+          var bottom_of_window = $(window).scrollTop() + $(window).height();
+          
+          if( bottom_of_window > bottom_of_element ){
+              $(this).animate({'margin-left':'30px'},1000);
+          }
+          
+      }); 
   });
-}
-
-window.addEventListener('scroll', debounce(checkSlide));
-
-*/
-
-
+});
