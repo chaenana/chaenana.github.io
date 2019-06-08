@@ -1,3 +1,37 @@
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0;padding:0}
+ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,hgroup,p,blockquote,figure,form,fieldset,input,legend,pre,abbr,button{margin:0;padding:0}
+pre,code,address,caption,th,figcaption{font-size:1em;font-weight:normal;font-style:normal}
+fieldset,iframe,abbr,img{border:0}
+caption,th{text-align:left}
+table{border-collapse:collapse;border-spacing:0}
+article,aside,footer,header,nav,main,section,summary,details,hgroup,figure,figcaption{display:block}
+audio,canvas,video,progress{display:inline-block;vertical-align:baseline}
+a{color:#0070c9}
+a:link,a:visited{text-decoration:none; color: black;}
+a:active{text-decoration:none}
+b,strong{font-weight:600}
+em,i,cite,dfn{font-style:italic}
+:focus{outline:3px solid #c1e0fe;outline:3px solid rgba(131,192,253,0.5);outline-offset:1px}
+:focus[data-focus-method="mouse"]:not(input):not(textarea):not(select),
+:focus[data-focus-method="touch"]:not(input):not(textarea):not(select){outline:none}
+::-moz-focus-inner{border:0;padding:0}
+@media print{
+    body,#main{color:#000}
+    a,a:link,a:visited{color:#000;text-decoration:none}
+    #global-nav,#global-footer,.noprint{display:none}
+}
+
+body{font-style:normal;font-size:12px;
+    font-weight:400;line-height:18px;letter-spacing:0}
+body,input,textarea,select,button
+    {
+        text-align:left;font-synthesis:none;-moz-font-feature-settings:'kern';
+        -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;direction:ltr;
+    }
+
+
+
 body{background-image: url(../img/texture-The-Hobbit-ART-light-lighting-darkness-562711-wallhere.com.jpg)}
 
 *{margin:0;padding:0}
@@ -45,14 +79,17 @@ body{background-image: url(../img/texture-The-Hobbit-ART-light-lighting-darkness
 
 
 
-.btn{width: 150px; height: 50px; border: 3px solid white; border-radius: 50px; background-color:black;  color: white;margin-left: auto;margin-right: auto;}
-
-
+.btn{text-align: center;width: 150px; height: 50px; border: 1px solid white; border-radius: 50px; background-color:white;  
+    color: white;margin-left: auto;margin-right: auto;transition: transform 1s;}
+.btn:hover{
+    transform: scale(1.1); background-color: gray;;
+}
+a:hover{ color: white}
 #cursor-dot,#cursor-bg{overflow:hidden;position:fixed;top:50%;left:50%;box-sizing:border-box;
     transform:translateX(-50%) translateY(-50%);pointer-events:none}
     
 #cursor-dot{z-index:600;width:4px;height:4px;border-radius:50%;background-color:#f00}
 #cursor-bg{z-index:400;width:30px;height:30px;border:1px solid #fff;border-radius:50%;
     transition:width 200ms ease-in-out,height 200ms ease-in-out,background-color 200ms ease-in-out,border-color 200ms ease-in-out}
-#cursor-bg.active{width:60px;height:60px;background-color:#fff;border-color:#fff;mix-blend-mode:difference}
+#cursor-bg.active{width:60px;height:60px;background-color:rgba(255,255,255,0.5);border-color:#fff;}
 

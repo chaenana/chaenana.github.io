@@ -34,6 +34,13 @@ body,input,textarea,select,button
 
 
 
+    #cursor-dot,#cursor-bg{overflow:hidden;position:fixed;top:50%;left:50%;box-sizing:border-box;
+        transform:translateX(-50%) translateY(-50%);pointer-events:none}
+        
+    #cursor-dot{z-index:600;width:4px;height:4px;border-radius:50%;background-color:#f00}
+    #cursor-bg{z-index:400;width:30px;height:30px;border:1px solid #fff;border-radius:50%;
+        transition:width 200ms ease-in-out,height 200ms ease-in-out,background-color 200ms ease-in-out,border-color 200ms ease-in-out}
+    #cursor-bg.active{width:60px;height:60px;background-color:rgba(255,255,255,0.5);border-color:#fff;}
 
     
 .blind{display:none;visibility:hidden}
@@ -230,6 +237,24 @@ position: relative;
 
 
 
+  .scroll{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    bottom:30px;
+    left: 0;
+    right: 0;
+    padding-top: 16px;
+    opacity: 0.5;
+    transition: transform 1s;
+  }
+
+  .scroll:hover {
+    transform: scale(1.1);
+  }
+
+
+
 #main .section:nth-child(1) #logo{
     float: right;
     margin-right: 20px;
@@ -292,6 +317,7 @@ color: white;
 padding-left: 100px;
 padding-top: 90px;
 box-sizing: border-box;
+position: relative;
 }
 
 #main .section:nth-child(2) h1{
@@ -351,6 +377,7 @@ line-height : 30px;
     padding-left: 100px;
     padding-top: 90px;
     box-sizing: border-box;
+    position: relative;
     }
     
     #main .section:nth-child(3) h1{
@@ -385,6 +412,7 @@ line-height : 30px;
         padding-left: 100px;
         padding-top: 90px;
         box-sizing: border-box;
+        position: relative;
         }
         
         #main .section:nth-child(4) h1{
@@ -407,11 +435,110 @@ line-height : 30px;
         line-height : 30px;
         }
         
-        
+        #main .section:nth-child(5){background-color:#333}
 
-#main .section:nth-child(5){background-color:#222}
-#main .section:nth-child(6){background-color:#333}
-#main .section:nth-child(7){background-color:#444}
+        #main .section:nth-child(6) 
+        {   position: relative;
+            background-image: url(../img/texture-The-Hobbit-ART-light-lighting-darkness-562711-wallhere.com.jpg);
+            background-attachment: fixed
+        }
+
+#main .section:nth-child(6) input, select {
+    vertical-align:middle;
+    }
+    
+    #main .section:nth-child(6) ul,ol,li{list-style-type:none}
+    
+    #main .section:nth-child(6).gallery{overflow:hidden;position: absolute;;width:100%;height:100vh}
+    #main .section:nth-child(6) .gallery .view{overflow:hidden;position: absolute;;width:100%;height:100%}
+    
+    
+    #main .section:nth-child(6) .gallery .view .view-container{position:absolute;top:0;left:0;width:100%;height:100%}
+    #main .section:nth-child(6) .gallery .view-container::after{content:"";display:block;position:relative;clear:both}
+    #main .section:nth-child(6) .gallery .view-container .view-item{overflow:hidden;float:left;width:100%;height:100%;}
+    .gallery .view-item img{display:inline-block;width:100%;height:100%;vertical-align:top;object-fit: contain}
+    /* .gallery .view-item img{display:inline-block;width:100%;height:100%;vertical-align:top;object-fit:cover} */ 
+    
+    #main .section:nth-child(6) .list-wrap{position:absolute;right:0;bottom:10px;left:0;width:100%}
+    #main .section:nth-child(6) .list{width:820px;margin-right:auto;margin-left:auto;padding-left: 45%}
+    
+    #main .section:nth-child(6) .list li{display:inline-block;width:50px;height: 50px;;padding-right:10px;padding-left:10px;vertical-align:top;box-sizing:border-box; border-radius: 50%}
+    #main .section:nth-child(6) .list li a{display:block;position:relative;width:10px;height: 10px;cursor:pointer; background-color: rgba(255,255,255,0.5); border-radius: 50%}
+    #main .section:nth-child(6) .list li a .cir{display:inline-block;width:100%;vertical-align:top;}
+    /* .list li a::before{content:"";display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.2);opacity:0.0} */
+    #main .section:nth-child(6) .list li a::before{content:"";display:block;position:absolute;top:0;left:0;width:100%;height:100%;
+    border:0 solid #000;box-sizing:border-box;-webkit-transition:border 120ms ease-in-out;-moz-transition:border 120ms ease-in-out;-o-transition:border 120ms ease-in-out;-ms-transition:border 120ms ease-in-out;transition:border 120ms ease-in-out}
+    #main .section:nth-child(6)  .list li.selected a{cursor:default; background-color: rgb(255,255,255)}
+    /* .list li.selected a::before{opacity:1.0} */
+    
+    
+    
+    
+    /* 밑에서부터 내가 추가로 쓴거임 */
+    #main .section:nth-child(6) .paddle-nav{position:absolute;top:0;width:100%}
+    #main .section:nth-child(6) .paddle-nav li{position:absolute;top:0;width:40px;height:100vh; margin-left: 10px; margin-right: 10px;}
+    #main .section:nth-child(6) .paddle-nav li.arrow.prev{left:0}
+    #main .section:nth-child(6) .paddle-nav li.arrow.next{right:0}
+    #main .section:nth-child(6)  .paddle-nav li button
+    {   overflow: hidden; 
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 50px; height: 50px; 
+        /* 1. 
+        margin-top: -20px; margin-left: -20px;
+        */
+        
+        /* 2. */
+        transform: translatex(-50%) translateY(-50%);
+        padding: 0; 
+        background-color: rgba(255,255,255,0.8);
+        border: 4px solid #000; 
+        border-radius: 50%; 
+        text-indent: -9999px; 
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out}
+    
+    
+        #main .section:nth-child(6).paddle-nav li button:hover{
+            background-color: rgba(255,255,255,1);
+        }
+    
+    
+        #main .section:nth-child(6).paddle-nav li button::before{
+            content: "";
+            display: block;
+            position: absolute;
+            padding:6px;
+            top: 50%; left: 50%;
+            border-top: 4px solid #000;
+            border-right: 4px solid #000;
+            box-sizing:border-box
+        }    
+    
+    
+    
+        #main .section:nth-child(6).paddle-nav li.arrow.prev button::before{
+            margin-left: 4px;
+            transform: translateX(-50%) translateY(-50%) rotate(-135deg);
+        }
+    
+        #main .section:nth-child(6).paddle-nav li.arrow.next button::before{
+            margin-left: -3px;
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        }
+    
+    
+        #main .section:nth-child(6) .paddle-nav li.arrow.disabled{display: none;}
+
+
+
+
+
+
+
+#main .section:nth-child(7){background-color:#333}
+#main .section:nth-child(8){background-color:#444}
 
 
 
