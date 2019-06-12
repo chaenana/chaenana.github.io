@@ -7,18 +7,28 @@
     <title>Home</title>
     <link rel="stylesheet" href="./css/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cantata+One|Nanum+Gothic|Playfair+Display+SC&display=swap" rel="stylesheet">
-<!--header-->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+
+</head>
+
+
+
+<body>
+
+
+    <!--header-->
 <nav id="global-nav">
     <div class="gn-content">            
             <a href="#main_page"><img src="img/the-hobbit-logo-png-6.png" width="120px">  </a>
 
       <ul class="gn-list">
-           <embed src='Malukah - Misty Mountains - The Hobbit Cover.mp3' autostart='true' hidden='true' volume='0' loop='0'>
+           <!-- <embed src='Malukah - Misty Mountains - The Hobbit Cover.mp3' autostart='true' hidden='true' volume='0' loop='0'> -->
             <li>           
             <a href="#main_page"><span>Home</span></a></li><li>
             <a href="#second"><span>Story</span></a></li><li>
             <a href="#third"><span>Photo</span></a></li><li>
-            <a href="#fourth"><span>Cast&crew</span></a></li><li>
+            <a href="#fourth"><span>Cast</span></a></li><li>
             <a href="#fifth"><span>Trailers</span></a></li><li>
             <a href="https://series.naver.com/tvstore/detail.nhn?mcode=97816" target="_blank"><button id="to_see">go to see</button></a></li>
                   
@@ -32,6 +42,8 @@
 <!--마우스 커서-->
 <div id="cursor-dot">&nbsp;</div>
 <div id="cursor-bg">&nbsp;</div>
+
+
 
 
 
@@ -167,7 +179,7 @@
 
     <section class="section" id="third">
         <div class="section-content">
-                <div id="gallery" class="gallery">
+                <!-- <div id="gallery" class="gallery">
                         <div class="view">
                           <div class="view-container">
                             <div class="view-item"><img src="./img/photo/대지 1.png" alt="갤러리 이미지 1"></div>
@@ -191,12 +203,7 @@
                               <a href="#" title="썸네일 4 버튼"><div class="cir"></div></a></li>
                         </ul>
                       </img>
-                      </div>
-
-
-
-
-
+                      </div> -->
         </div>
     </section>
 
@@ -204,9 +211,53 @@
 
     <section class="section" id="fourth">
         <div class="section-content">
+               <div class="cast1">
+                   <h1> Cast. Martin Freeman<br>
+                    <span class="is">is</span><br>
+                    Bilbo Baggins
+                   </h1>
+                   <h3><a href="#">view more</a></h3>
+               </div>
                
+               <div class="cast2">
+                <h1> Cast. Ian Mckellen<br>
+                 <span class="is">is</span><br>
+                 Gandalf
+                </h1>
+                <h3><a href="#">view more</a></h3>
+            </div>
         </div>
+       
     </section>
+
+               <!-- <p id="cast">
+                Producer. Peter Jackson<br>
+                Writer. J.R.R.Tolkein<br><span id="cast_span">
+               Cast. Richard Armitage</span>
+                </p>
+                -->
+
+                <section class="section" id="fourth">
+                    <div class="section-content">
+                           <div class="cast3">
+                               <h1> Cast.Richard Armitage<br>
+                                <span class="is">is</span><br>
+                                Thorin oakenshield
+                               </h1>
+                               <h3><a href="#">view more</a></h3>
+                           </div>
+                           
+                           <div class="cast4">
+                            <h1> Cast. Lee Pace<br>
+                             <span class="is">is</span><br>
+                             Thranduil
+                            </h1>
+                            <h3><a href="#">view more</a></h3>
+                        </div>
+                    </div>
+                   
+                </section>
+
 
 <!--trailers 페이지 -->
 
@@ -220,6 +271,7 @@
                         <div class="view-item"><iframe src="https://www.youtube.com/embed/5OzeRGnkl1Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                         <div class="view-item"><iframe  src="https://www.youtube.com/embed/4qNcZCZNHD8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                       </div>
+                      
                       <!--<div class="clear"></div>-->
                     </div>
                   
@@ -234,7 +286,12 @@
 <!--footer -->
 <footer id="global-footer">
     <div class="gf-content">
-        <h2>Footer</h2>
+        <div class="i_list">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-google-plus-square"></i>
+    </div>
     </div>
 </footer>
 <script src="./vender/anime/anime.min.js" type="text/javascript"></script>

@@ -237,6 +237,22 @@ position: relative;
 
 
 
+  @keyframes bigger {
+    0% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+
   .scroll{
     margin-left: auto;
     margin-right: auto;
@@ -246,11 +262,8 @@ position: relative;
     right: 0;
     padding-top: 16px;
     opacity: 0.5;
-    transition: transform 1s;
-  }
-
-  .scroll:hover {
-    transform: scale(1.1);
+    animation: bigger 3s ease-in-out infinite alternate;
+    -webkit-animation: bigger 3s ease-in-out infinite alternate;
   }
 
 
@@ -435,7 +448,11 @@ line-height : 30px;
         line-height : 30px;
         }
         
-        #main .section:nth-child(5){background-color:#333}
+        #main .section:nth-child(5){
+            background-color: #000}
+
+
+
 
         #main .section:nth-child(6) 
         {   position: relative;
@@ -443,7 +460,7 @@ line-height : 30px;
             background-attachment: fixed
         }
 
-#main .section:nth-child(6) input, select {
+/* #main .section:nth-child(6) input, select {
     vertical-align:middle;
     }
     
@@ -456,25 +473,18 @@ line-height : 30px;
     #main .section:nth-child(6) .gallery .view .view-container{position:absolute;top:0;left:0;width:100%;height:100%}
     #main .section:nth-child(6) .gallery .view-container::after{content:"";display:block;position:relative;clear:both}
     #main .section:nth-child(6) .gallery .view-container .view-item{overflow:hidden;float:left;width:100%;height:100%;}
-    .gallery .view-item img{display:inline-block;width:100%;height:100%;vertical-align:top;object-fit: contain}
-    /* .gallery .view-item img{display:inline-block;width:100%;height:100%;vertical-align:top;object-fit:cover} */ 
-    
+    .gallery .view-item img{display:inline-block;width:100%;height:100%;vertical-align:top;object-fit: contain}    
     #main .section:nth-child(6) .list-wrap{position:absolute;right:0;bottom:10px;left:0;width:100%}
     #main .section:nth-child(6) .list{width:820px;margin-right:auto;margin-left:auto;padding-left: 45%}
     
     #main .section:nth-child(6) .list li{display:inline-block;width:50px;height: 50px;;padding-right:10px;padding-left:10px;vertical-align:top;box-sizing:border-box; border-radius: 50%}
     #main .section:nth-child(6) .list li a{display:block;position:relative;width:10px;height: 10px;cursor:pointer; background-color: rgba(255,255,255,0.5); border-radius: 50%}
     #main .section:nth-child(6) .list li a .cir{display:inline-block;width:100%;vertical-align:top;}
-    /* .list li a::before{content:"";display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.2);opacity:0.0} */
+
     #main .section:nth-child(6) .list li a::before{content:"";display:block;position:absolute;top:0;left:0;width:100%;height:100%;
     border:0 solid #000;box-sizing:border-box;-webkit-transition:border 120ms ease-in-out;-moz-transition:border 120ms ease-in-out;-o-transition:border 120ms ease-in-out;-ms-transition:border 120ms ease-in-out;transition:border 120ms ease-in-out}
     #main .section:nth-child(6)  .list li.selected a{cursor:default; background-color: rgb(255,255,255)}
-    /* .list li.selected a::before{opacity:1.0} */
     
-    
-    
-    
-    /* 밑에서부터 내가 추가로 쓴거임 */
     #main .section:nth-child(6) .paddle-nav{position:absolute;top:0;width:100%}
     #main .section:nth-child(6) .paddle-nav li{position:absolute;top:0;width:40px;height:100vh; margin-left: 10px; margin-right: 10px;}
     #main .section:nth-child(6) .paddle-nav li.arrow.prev{left:0}
@@ -484,11 +494,6 @@ line-height : 30px;
         position: absolute;
         top: 50%; left: 50%;
         width: 50px; height: 50px; 
-        /* 1. 
-        margin-top: -20px; margin-left: -20px;
-        */
-        
-        /* 2. */
         transform: translatex(-50%) translateY(-50%);
         padding: 0; 
         background-color: rgba(255,255,255,0.8);
@@ -532,15 +537,190 @@ line-height : 30px;
         #main .section:nth-child(6) .paddle-nav li.arrow.disabled{display: none;}
 
 
+ */
 
 
 
 
+#main .section:nth-child(7){position: relative; width: 100%;height: 100%;}
 
-#main .section:nth-child(7){background-color:#333}
-#main .section:nth-child(8){background-color:#444}
+#main .section:nth-child(7) .cast1{
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    background-image: url(../img/profile1_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    float: left;
+}
+
+#main .section:nth-child(7) .cast1 h1{
+    position: absolute;
+    display: block;
+    top: 20%;
+    left: 35%;
+    font-size: 25px;
+    width: 30%;
+    height: 45%;
+    color: white;
+    /* background-color: #000; */
+    text-align: center;
+    line-height: 200%;
+}
+
+#main .section:nth-child(7) .cast1 h3{
+    position: absolute;
+    top: 85%;
+    left: 35%;
+    font-size:15px;
+    width: 30%;
+    color: white;
+    /* background-color: #000; */
+    text-align: center;
+}
 
 
+#main .section:nth-child(7) .cast1 .is{
+    font-size:20px;
+    color: white;
+    text-align: center;
+}
+
+#main .section:nth-child(7) .cast2{
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    background-image: url(../img/profile2_2.jpg);
+    background-size: cover;
+    background-position-y: -50px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    float: left;
+}
+#main .section:nth-child(7) .cast2 h1{
+    position: absolute;
+    display: block;
+    top: 20%;
+    left: 35%;
+    font-size: 25px;
+    width: 30%;
+    height: 45%;
+    color: white;
+    /* background-color: #000; */
+    text-align: center;
+    line-height: 200%;
+}
+
+#main .section:nth-child(7) .cast2 h3{
+    position: absolute;
+    top: 85%;
+    left: 35%;
+    font-size:15px;
+    width: 30%;
+    color: white;
+    /* background-color: #000; */
+    text-align: center;
+}
+
+
+#main .section:nth-child(7) .cast2 .is{
+    font-size:20px;
+    color: white;
+    text-align: center;
+}
+
+#main .section:nth-child(8){position: relative; width: 100%;height: 100%;}
+
+#main .section:nth-child(8) .cast3{
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    background-image: url(../img/profile3_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    float: left;
+}
+
+#main .section:nth-child(8) .cast3 h1{
+    position: absolute;
+    display: block;
+    top: 20%;
+    left: 35%;
+    font-size: 25px;
+    width: 30%;
+    height: 45%;
+    color: white;
+    /* background-color: #000; */
+    text-align: center;
+    line-height: 200%;
+}
+
+#main .section:nth-child(8) .cast3 h3{
+    position: absolute;
+    top: 85%;
+    left: 35%;
+    font-size:15px;
+    width: 30%;
+    color: white;
+    /* background-color: #000; */
+    text-align: center;
+}
+
+
+#main .section:nth-child(8) .cast3 .is{
+    font-size:20px;
+    color: white;
+    text-align: center;
+}
+
+#main .section:nth-child(8) .cast4{
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    background-image: url(../img/profile4_1.jpg);
+    background-size: cover;
+    background-position-y: -150px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    float: left;
+}
+#main .section:nth-child(8) .cast4 h1{
+    position: absolute;
+    display: block;
+    top: 20%;
+    left: 35%;
+    font-size: 25px;
+    width: 30%;
+    height: 45%;
+    color: white;
+    /* background-color: #000; */
+    text-align: center;
+    line-height: 200%;
+}
+
+#main .section:nth-child(8) .cast4 h3{
+    position: absolute;
+    top: 85%;
+    left: 35%;
+    font-size:15px;
+    width: 30%;
+    color: white;
+    /* background-color: #000; */
+    text-align: center;
+}
+
+
+#main .section:nth-child(8) .cast4 .is{
+    font-size:20px;
+    color: white;
+    text-align: center;
+}
+
+#main .section:nth-child(9){background-color:black}
 
 
 
@@ -555,13 +735,11 @@ line-height : 30px;
     box-sizing: border-box
 }
 
-#global-footer{position:relative;width:100%;height:80px;background-color:#999}
-#global-footer::before{content:"";display:block;position:absolute;top:0;right:0;left:0;width:100%;height:0;border-top:1px solid #fff}
-#global-footer .gf-content{width:980px;margin-right:auto;margin-left:auto;text-align:center;padding-top:20px;padding-bottom:40px}
-#global-footer .gf-content h2{color:#fff;font-size:12px;font-weight:400;line-height:20px}
-.notice{display:block;position:fixed;z-index:10000;bottom:0;left:0;padding:10px;background-color:#fff;border-top-right-radius:4px;border-bottom-right-radius:4px;color:#000;font-size:12px;line-height:20px}
-.notice::before{content:"--"}
-
+#global-footer{position:relative;width:100%;height:80px;background-color:rgb(2, 2, 29)}
+#global-footer::before{content:"";display:block;position:absolute;top:0;right:0;left:0;width:100%;height:0;}
+#global-footer .gf-content{width:100%;margin-right:auto;margin-left:auto;text-align:center;padding-top:30px;}
+#global-footer .gf-content i{font-size: 20px; color: rgb(255,255,255); margin-left: 10px; float: left;}
+#global-footer .gf-content .i_list{margin-left: 5%}
 
 @media only screen and (min-width:1920px){
     /* .notice::before{content:"1920px ~"}; */
