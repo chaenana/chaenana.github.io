@@ -9,7 +9,6 @@ article,aside,footer,header,nav,main,section,summary,details,hgroup,figure,figca
 audio,canvas,video,progress{display:inline-block;vertical-align:baseline}
 button{background:none;border:0;-webkit-box-sizing:content-box;box-sizing:content-box;color:inherit;cursor:pointer;font:inherit;line-height:inherit;overflow:visible;vertical-align:inherit}
 button:disabled{cursor:default}
-a{color:#0070c9}
 a:link,a:visited{text-decoration:none}
 a:active{text-decoration:none}
 b,strong{font-weight:600}
@@ -205,7 +204,7 @@ position: relative;
   }
 
 
-  iframe {
+  #main .section:nth-child(1) .section-content  iframe {
     animation: move 2s forwards;
   }
 
@@ -350,32 +349,8 @@ position: relative;
 #main .section:nth-child(2) p{
 font-family: 'Nanum Gothic', sans-serif;
 font-size : 12px;
-line-height : 30px;
+line-height : 250%;
 }
-
-/* 
-@keyframes fade-up {
-    0% {
-      opacity: 0;
-      transform: translateY(5em);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .fade-up {
-    margin-left: -800px;
-    animation: fade-up 4s cubic-bezier(.05,.98,.17,.97) forwards;
-  }
-  
-    .story.fade-up {
-    opacity: 0;
-    animation-delay: 0.5s;
-  } */
-
- 
 
   .fade-up {
     margin-left: -800px;}
@@ -449,7 +424,125 @@ line-height : 30px;
         }
         
         #main .section:nth-child(5){
-            background-color: #000}
+            background-image: url(../img/temple-sunlight-night-The-Hobbit-Bilbo-Baggins-The-Hobbit-An-Unexpected-Journey-566036-wallhere.com.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            width: 100%;
+            position: relative;
+            box-sizing: border-box;
+            padding-top: 5%;
+        }
+
+        #main .section:nth-child(5) h1{text-align: center; margin-bottom: 40px; font-size: 40px; display: block; height: 50px;width: 150px;
+        margin-left: auto; margin-right: auto; 
+        border-bottom: white 1px solid}
+
+
+
+
+
+
+        #main .section:nth-child(5) .rev{
+            opacity: 0;
+            margin-top: -50px;
+        }
+
+
+
+
+        #main .section:nth-child(5) .star {
+            font-size: 30px;
+            margin-bottom: 5px;
+            display: block
+        }
+
+
+        #main .section:nth-child(5) .name{
+            font-size: 10px;
+        }
+
+
+        #main .section:nth-child(5) #re1{
+            font-size: 15px;
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 500px;
+            margin-left:150px;
+            line-height: 180%;
+            font-family: 'Nanum Gothic', sans-serif;
+            float: left;
+            opacity: 1;
+
+        }
+
+      .clear{
+          clear: both;
+      }
+
+        #main .section:nth-child(5) #re2{
+            font-size: 15px;
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 500px;
+            margin-left: 200px;
+            line-height: 180%;
+            font-family: 'Nanum Gothic', sans-serif;
+            float: left;
+            opacity: 1;
+        }
+
+
+
+        #main .section:nth-child(5) #re3{
+            font-size: 15px;
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 500px;
+            margin-left: 150px;
+            line-height: 180%;
+            font-family: 'Nanum Gothic', sans-serif;
+            float: left;
+            opacity: 1;
+
+        }
+
+        #main .section:nth-child(5) #re4{
+            font-size: 15px;
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 500px;
+            margin-left: 200px;
+            line-height: 180%;
+            font-family: 'Nanum Gothic', sans-serif;
+            float: left;
+            opacity: 1;
+
+        }
+
+
+
+
+
+@keyframes updown {
+    0% {
+      opacity: 0;
+      transform: translateY(-5em);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+
+
 
 
 
@@ -457,92 +550,189 @@ line-height : 30px;
         #main .section:nth-child(6) 
         {   position: relative;
             background-image: url(../img/texture-The-Hobbit-ART-light-lighting-darkness-562711-wallhere.com.jpg);
-            background-attachment: fixed
+            background-attachment: fixed;
+            color: white;
+            text-align:center;
+            position: relative;
+            width: 100%;
+            height: 100vh;
         }
 
-/* #main .section:nth-child(6) input, select {
-    vertical-align:middle;
+
+        #main .section:nth-child(6) .ph1{
+            height: 50%; width: 100%;
+            font-size:25px;
+            line-height: 250%;
+            position: absolute;
+            box-sizing: border-box;
+        }
+        #main .section:nth-child(6) .ph1 p{
+        margin-top:3%;
+        }
+        #main .section:nth-child(6) .ph2{
+            height: 50%; width: 100%;
+            font-size:25px;
+            line-height: 250%;
+            position: absolute;
+            box-sizing: border-box;
+            top: 50%
+        }
+        #main .section:nth-child(6) .ph2 p{
+        margin-top:3%;
+        }
+
+
+
+#main .section:nth-child(7){position: relative; width: 100%;height: 100vh;}
+
+#main .section:nth-child(7) .hidden1{
+width: 100%;
+height: 50%;
+margin-right:auto;margin-left:auto;
+box-sizing: border-box;
+background-image: url(../img/profile1_1.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+color: white;
+visibility: hidden;
+z-index: 8;
+position: absolute;
+top:0;
+right: 0;
+}
+
+#main .section:nth-child(7) .hidden1 .hi_tex{
+background-color: white;
+width: 30%;
+height: 100%;
+position: absolute;
+color:black;}
+
+
+#main .section:nth-child(7) .hidden1 .hi_tex h1{
+    font-size: 40px;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-bottom: #000 solid 2px;
+    /* background-color: #c1e0fe; */
+    height: 40px;
+    width: 350px;
+    text-align: center;
+}
+
+#main .section:nth-child(7) .hidden1 .hi_tex p{
+    margin-top: 30px;
+    width: 410px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 13px;
+    line-height: 180%;
+}
+
+
+#main .section:nth-child(7) .hidden1.show{
+
+    visibility: visible;
+    -webkit-animation: inn 2s forwards;
+    animation: inn 2s forwards;
+}
+
+@-webkit-keyframes inn {
+    0% {
+      opacity: 0;
+      margin-right: -30px;
+    }
+    100% {
+      opacity: 1;
+      margin-right: 0;
+    }
+  }
+ 
+
+
+
+
+
+  #main .section:nth-child(7) .hidden2{
+    width: 100%;
+    height: 50%;
+    margin-right:auto;margin-left:auto;
+    box-sizing: border-box;
+    background-image: url(../img/profile1_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    visibility: hidden;
+    z-index: 8;
+    position: absolute;
+    top:50%;
+    right: 0;
     }
     
-    #main .section:nth-child(6) ul,ol,li{list-style-type:none}
+    #main .section:nth-child(7) .hidden2 .hi_tex2{
+    background-color: white;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    color:black;}
     
-    #main .section:nth-child(6).gallery{overflow:hidden;position: absolute;;width:100%;height:100vh}
-    #main .section:nth-child(6) .gallery .view{overflow:hidden;position: absolute;;width:100%;height:100%}
+    
+    #main .section:nth-child(7) .hidden2 .hi_tex2 h1{
+        font-size: 40px;
+        margin-top: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        border-bottom: #000 solid 2px;
+        /* background-color: #c1e0fe; */
+        height: 40px;
+        width: 350px;
+        text-align: center;
+    }
+    
+    #main .section:nth-child(7) .hidden2 .hi_tex2 p{
+        margin-top: 30px;
+        width: 410px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size: 13px;
+        line-height: 180%;
+    }
     
     
-    #main .section:nth-child(6) .gallery .view .view-container{position:absolute;top:0;left:0;width:100%;height:100%}
-    #main .section:nth-child(6) .gallery .view-container::after{content:"";display:block;position:relative;clear:both}
-    #main .section:nth-child(6) .gallery .view-container .view-item{overflow:hidden;float:left;width:100%;height:100%;}
-    .gallery .view-item img{display:inline-block;width:100%;height:100%;vertical-align:top;object-fit: contain}    
-    #main .section:nth-child(6) .list-wrap{position:absolute;right:0;bottom:10px;left:0;width:100%}
-    #main .section:nth-child(6) .list{width:820px;margin-right:auto;margin-left:auto;padding-left: 45%}
+    #main .section:nth-child(7) .hidden2.show1{
     
-    #main .section:nth-child(6) .list li{display:inline-block;width:50px;height: 50px;;padding-right:10px;padding-left:10px;vertical-align:top;box-sizing:border-box; border-radius: 50%}
-    #main .section:nth-child(6) .list li a{display:block;position:relative;width:10px;height: 10px;cursor:pointer; background-color: rgba(255,255,255,0.5); border-radius: 50%}
-    #main .section:nth-child(6) .list li a .cir{display:inline-block;width:100%;vertical-align:top;}
+        visibility: visible;
+        -webkit-animation: inn2 2s forwards;
+        animation: inn2 2s forwards;
+    }
+    
 
-    #main .section:nth-child(6) .list li a::before{content:"";display:block;position:absolute;top:0;left:0;width:100%;height:100%;
-    border:0 solid #000;box-sizing:border-box;-webkit-transition:border 120ms ease-in-out;-moz-transition:border 120ms ease-in-out;-o-transition:border 120ms ease-in-out;-ms-transition:border 120ms ease-in-out;transition:border 120ms ease-in-out}
-    #main .section:nth-child(6)  .list li.selected a{cursor:default; background-color: rgb(255,255,255)}
-    
-    #main .section:nth-child(6) .paddle-nav{position:absolute;top:0;width:100%}
-    #main .section:nth-child(6) .paddle-nav li{position:absolute;top:0;width:40px;height:100vh; margin-left: 10px; margin-right: 10px;}
-    #main .section:nth-child(6) .paddle-nav li.arrow.prev{left:0}
-    #main .section:nth-child(6) .paddle-nav li.arrow.next{right:0}
-    #main .section:nth-child(6)  .paddle-nav li button
-    {   overflow: hidden; 
-        position: absolute;
-        top: 50%; left: 50%;
-        width: 50px; height: 50px; 
-        transform: translatex(-50%) translateY(-50%);
-        padding: 0; 
-        background-color: rgba(255,255,255,0.8);
-        border: 4px solid #000; 
-        border-radius: 50%; 
-        text-indent: -9999px; 
-        box-sizing: border-box;
-        cursor: pointer;
-        transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out}
-    
-    
-        #main .section:nth-child(6).paddle-nav li button:hover{
-            background-color: rgba(255,255,255,1);
+
+    @-webkit-keyframes inn2 {
+        0% {
+          opacity: 0;
+          margin-right: -30px;
         }
-    
-    
-        #main .section:nth-child(6).paddle-nav li button::before{
-            content: "";
-            display: block;
-            position: absolute;
-            padding:6px;
-            top: 50%; left: 50%;
-            border-top: 4px solid #000;
-            border-right: 4px solid #000;
-            box-sizing:border-box
-        }    
-    
-    
-    
-        #main .section:nth-child(6).paddle-nav li.arrow.prev button::before{
-            margin-left: 4px;
-            transform: translateX(-50%) translateY(-50%) rotate(-135deg);
+        100% {
+          opacity: 1;
+          margin-right: 0;
         }
-    
-        #main .section:nth-child(6).paddle-nav li.arrow.next button::before{
-            margin-left: -3px;
-            transform: translateX(-50%) translateY(-50%) rotate(45deg);
-        }
-    
-    
-        #main .section:nth-child(6) .paddle-nav li.arrow.disabled{display: none;}
+      }
+     
 
-
- */
+  
 
 
 
-
-#main .section:nth-child(7){position: relative; width: 100%;height: 100%;}
 
 #main .section:nth-child(7) .cast1{
     width: 100%;
@@ -554,6 +744,15 @@ line-height : 30px;
     position: absolute;
     float: left;
 }
+
+#main .section:nth-child(7) .cast1:hover{
+    background-image: url(../img/profile1.jpg);
+    
+}
+
+
+
+
 
 #main .section:nth-child(7) .cast1 h1{
     position: absolute;
@@ -631,7 +830,7 @@ line-height : 30px;
     text-align: center;
 }
 
-#main .section:nth-child(8){position: relative; width: 100%;height: 100%;}
+#main .section:nth-child(8){position: relative; width: 100%;height: 100vh;}
 
 #main .section:nth-child(8) .cast3{
     width: 100%;
@@ -720,11 +919,21 @@ line-height : 30px;
     text-align: center;
 }
 
-#main .section:nth-child(9){background-color:black}
+#main .section:nth-child(9){background-color:black; position: relative; box-sizing: border-box;
+padding-top: 7%; color: white}
+#main .section:nth-child(9) .view-container{
+    width:1200px;
+    margin-left: -1500px;
+    box-sizing: border-box
+}
+#main .section:nth-child(9) iframe{float: left; border: #fff 1.2px solid}
 
-
-
-
+#main .section:nth-child(9) #fi{
+ margin-right: 20px;
+}
+#main .section:nth-child(9) #se, #th, #fo{
+    margin-bottom: 23px
+}
 
 
 #main .section .section-content
@@ -735,11 +944,12 @@ line-height : 30px;
     box-sizing: border-box
 }
 
-#global-footer{position:relative;width:100%;height:80px;background-color:rgb(2, 2, 29)}
+#global-footer{position:relative;width:100%;height:80px;background-color:rgb(2, 2, 29); color: white;}
 #global-footer::before{content:"";display:block;position:absolute;top:0;right:0;left:0;width:100%;height:0;}
 #global-footer .gf-content{width:100%;margin-right:auto;margin-left:auto;text-align:center;padding-top:30px;}
 #global-footer .gf-content i{font-size: 20px; color: rgb(255,255,255); margin-left: 10px; float: left;}
 #global-footer .gf-content .i_list{margin-left: 5%}
+#global-footer .gf-content p{text-align: center; margin-left:auto;margin-right: auto; width: 800px;}
 
 @media only screen and (min-width:1920px){
     /* .notice::before{content:"1920px ~"}; */
@@ -762,28 +972,22 @@ line-height : 30px;
 }
 @media only screen and (min-width:768px) and (max-width:1023px){
     /* .notice::before{content:"768px ~ 1023px"} */
-    #global-nav{background-color:red};
     
 }
 @media only screen and (min-width:586px) and (max-width:767px){
     /* .notice::before{content:"586px ~ 767px"} */
-    #global-nav{background-color:blue}
 }
 @media only screen and (min-width:414px) and (max-width:585px){
     /* .notice::before{content:"414px ~ 585px"} */
-    #global-nav{background-color:yellow}
 
 }
 @media only screen and (min-width:375px) and (max-width:413px){
     /* .notice::before{content:"375px ~ 413px"} */
-    #global-nav{background-color:purple}
 
 }
 @media only screen and (min-width:320px) and (max-width:374px){
     /* .notice::before{content:"320px ~ 374px"} */
-    #global-nav{background-color:green}
 }
 @media only screen and (max-width:319px){
     /* .notice::before{content:"~ 319px"} */
-    #global-nav{background-color:orange}
 }

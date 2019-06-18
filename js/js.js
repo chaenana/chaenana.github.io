@@ -84,14 +84,52 @@ $(document).ready(function() {
   });
 });
 
+
+
+$(document).ready(function() {
+  $(window).scroll( function(){
+      $('.rev').each( function(i){
+          
+          var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+          var bottom_of_window = $(window).scrollTop() + $(window).height();
+          
+          if( bottom_of_window > bottom_of_element ){
+              $(this).animate({'opacity':'1','margin-top':'0px'}, 1500);
+          }
+          
+      }); 
+  });
+});
+
+
+
+$(document).ready(function() {
+  $(window).scroll( function(){
+      $('.view-container').each( function(i){
+          
+          var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+          var bottom_of_window = $(window).scrollTop() + $(window).height();
+          
+          if( bottom_of_window > bottom_of_element ){
+              $(this).animate({'opacity':'1','margin-left':'12%'}, 1800);
+          }
+          
+      }); 
+  });
+});
+
+
+
+
+
 //마우스 커서
 var $cursorDot = document.querySelector("#cursor-dot");
 var $cursorBG = document.querySelector("#cursor-bg");
 
 window.addEventListener("mousemove", onMouseMoveWindow);
 
-function onMouseMoveWindow(e){
-    var posX = e.pageX, posY=e.pageY
+function onMouseMoveWindow(e) {
+    var posX = e.clientX, posY = e.clientY;
     TweenMax.to($cursorDot, 0.15,{css : {top:posY,left:posX}, ease : Quad.easeInOut});
     TweenMax.to($cursorBG, 0.15,{css : {top:posY,left:posX}, ease : Quad.easeInOut});
 
@@ -99,148 +137,59 @@ function onMouseMoveWindow(e){
 
 
 
-//슬라이드
-
-
-var $gallery = document.querySelector('#gallery');
-
-var $view = $gallery.querySelector(".view");
-var $viewContainer = $view.querySelector(".view-container");
-var $viewItem = $viewContainer.querySelectorAll(".view-item");
-
-var $list = $gallery.querySelector(".list");
-var $listItem = $list.querySelectorAll("li");
-var _$a = [];
+//클릭시 팝업 나옴
 
 
 
-var $paddlenav = $gallery.querySelector(".paddle-nav");
-var $btnPaddleEl = $paddlenav.querySelectorAll("button");
-var $btnPaddlePrevEl = $paddlenav.querySelector(".prev");
-var $btnPaddleNextEl = $paddlenav.querySelector(".next");
+// var $viewmore1 = document.getElementsByClassName(".Btnviewmore1");
+// $viewmore1.addEventListener("click",onClickBtnmore1);
+// function onClickBtnmore1(e){
+//   e.preventDefault();
+//   var popup1 = document.getElementsByClassName("hidden1");
+//   popup1[0].classList.toggle("show");
+
+// }
 
 
 
 
 
 
-var _vWidth = window.innerWidth;
-var _vHeight = window.innerHeight;
 
-var _max = $viewItem.length;
-var _cuId = 0;
-var _exId = _cuId;
+/*
+var $btnview = document.querySelector("button#btn-add-item");
+$btnAddItem.addEventListener("click", onClickBtnAddItem);
+function onClickBtnAddItem(e) {
 
-window.addEventListener('resize', onResize);
-function onResize() {
-    var _vWidth = window.innerWidth;
-    var _vHeight = window.innerHeight;
-    $viewContainer.style.width = (_vWidth * _max) + 'px';
-    for(var i =0; i < _max; i++){
-        $viewItem[i].style.width = _vWidth + 'px';
-    }
-    // 리사이즈 할 때, view-container 의 left 좌표 변경.
-    var left = _vWidth * _cuId * -1;
-    // $viewContainer.style.left = left + 'px';
-    TweenMax.killTweensOf($viewContainer); // 해당 요소의 TweenMax 애니메이션 정지.
-    TweenMax.set($viewContainer, {css: {left: left}});
-}
-onResize();
-
-for(var i=0; i< $btnPaddleEl.length; i++){
-    $btnPaddleEl[i].addEventListener("click", onClickPaddleEl)
-}
-
-function onClickPaddleEl(e){
-e.preventDefault();
-var $li = e.currentTarget.parentElement; //currenttarget 현재 자기 자신
-if($li.classList.contains('prev')){
-    
-    console.log("prev");
-    _cuId--;
-    if(_cuId < 0 ) _cuId = 0;
-}
-else if($li.classList.contains('next')){
-    console.log("next");
-    _cuId++;
-    if(_cuId >= _max ) _cuId = _max -1;
-}
-
-slide();
-}
-
-
-
-
-
-for(var i = 0; i < _max; i++){
-    var $a = $listItem[i].querySelector("a");
-    _$a.push($a);
-    $a.addEventListener("click", onClickListItemEl);
-}
-function onClickListItemEl(e) {
-    e.preventDefault();
-    var id = _$a.indexOf(e.currentTarget);
-    var $listItemParent = e.currentTarget.parentElement;
-    //현재 클릭된 요소(a) 의 부모 요소(li)를 찾는다.
-    if(!$listItemParent.classList.contains('selected')){
-        //부모 요소(li) 가 selected 라는 클래스를 포함하고 있는지 체크 - 조건에서는 포함하지 않을 때(false).
-        _cuId = id;
-        slide();
-      
+    var number = prompt("숫자를 입력해주세요.");
+    var $ulList = document.querySelector("ul#list");
+    if(number !== null && number !== '' && !isNaN(Number(number))){
+        $ulList.innerHTML = ''; //요소의 HTML 내용 지우기.
+        number = Number(number);
+        for(var i = 0; i < number; i++){
+            var $li = document.createElement("li"); // 가상의 <li></li> 생성.
+            $li.classList.add("item"); // $li.className = "item";
+            $li.innerText = i + 1;
+            $ulList.appendChild($li);
+        }
     }
 }
 
-$btnPaddlePrevEl.classList.add("disabled");
-function slide(){
-    if(_cuId === 0){
-        $btnPaddlePrevEl.classList.add("disabled");
-        $btnPaddleNextEl.classList.remove("disabled");
-        
-    }else if( _cuId === _max -1){
-        $btnPaddlePrevEl.classList.remove("disabled");
-        $btnPaddleNextEl.classList.add("disabled");
-
-    }else{
-        $btnPaddlePrevEl.classList.remove("disabled");
-        $btnPaddleNextEl.classList.remove("disabled");
-    }
-      //현재 클릭된 버튼의 번호를 변경.
-      $listItem[_exId].classList.remove("selected");
-      //이전에 활성화된 버튼의 클래스(selected)를 삭제
-      $listItem[_cuId].classList.add("selected");
-      //현재 버튼의 클래스(selected)가 활성화되도록 추가.
-      var left = _vWidth * _cuId * -1;
-
-      
-      //anime.
-      /*
-      anime({
-          targets : $viewContainer,
-          left : left,
-          duration : 1000,
-          easing : "easeInOutQuad"
-      });
-      */
-
-      //TweenMax.
-      //TweenMax.set();
-      //애니메이션 없이 스타일을 변경.
-      //TweenMax.set($viewContainer, { css: { left: left }});
-      //TweenMax.to();
-      //애니메이션을 설정.
-      TweenMax.to($viewContainer, 1.0, { css: { left: left }, ease: Quad.easeInOut });
-
-
-      //$viewContainer.style.left = left + 'px';
+*/
 
 
 
-      _exId = _cuId;
-      //다음 클릭시 눌렸던 번호를 유지하도록 값을 설정.
+
+/*
+var $hidden = document.querySelector("viewmore2")
+
+window.addEventListener("click", onClickhidden1)
+
+function onClickhidden1(e) {
+  e.preventDefault();
+  var popup1 = document.getElementsByClassName("hidden2");
+  console.log("popup1");
+  popup1[0].classList.toggle("show1");
 }
 
-
-
-
-
+*/
