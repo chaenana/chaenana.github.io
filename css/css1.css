@@ -34,6 +34,7 @@ body,input,textarea,select,button
 
 body{background-size: cover;
     background-image: url(../img/84316.jpg);
+    background-repeat: no-repeat;
     background-position: center;
     background-position-y: -130px;
     
