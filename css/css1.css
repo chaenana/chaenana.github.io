@@ -7,7 +7,6 @@ caption,th{text-align:left}
 table{border-collapse:collapse;border-spacing:0}
 article,aside,footer,header,nav,main,section,summary,details,hgroup,figure,figcaption{display:block}
 audio,canvas,video,progress{display:inline-block;vertical-align:baseline}
-a{color:#0070c9}
 a:link,a:visited{text-decoration:none; color: black;}
 a:active{text-decoration:none}
 b,strong{font-weight:600}
@@ -23,7 +22,8 @@ em,i,cite,dfn{font-style:italic}
 }
 
 body{font-style:normal;font-size:12px;
-    font-weight:400;line-height:18px;letter-spacing:0}
+    font-weight:400;line-height:18px;letter-spacing:0;
+}
 body,input,textarea,select,button
     {
         text-align:left;font-synthesis:none;-moz-font-feature-settings:'kern';
@@ -32,7 +32,12 @@ body,input,textarea,select,button
 
 
 
-body{background-image: url(../img/texture-The-Hobbit-ART-light-lighting-darkness-562711-wallhere.com.jpg)}
+body{background-size: cover;
+    background-image: url(../img/84316.jpg);
+    background-position: center;
+    background-position-y: -130px;
+    
+}
 
 *{margin:0;padding:0}
 .blind
@@ -41,49 +46,40 @@ body{background-image: url(../img/texture-The-Hobbit-ART-light-lighting-darkness
         visibility:hidden
     }
 
-.section-container
-    {
-        position:relative;
-        width:100%;
-        height:100vh
-    }
-
-.section-container .section-content
-    {
-        max-width:1440px;
-        height:100%;
-        margin-right:auto;
-        margin-left:auto;
-        padding-right:40px;
-        padding-left:40px
-    }
-
-.section-container .section-content ul
-    {
-        position:relative;
-        top:50%;
-        transform:translateY(-50%);
-        padding-left: 45%;
-    }
-.section-container .section-content li
-    {
-        display:inline-block;
-        width:25%;
-        padding-right:20px;
-        padding-left:20px;
-        vertical-align:top;
-        box-sizing:border-box;
-    }
-.section-container .section-content li a{display:block}
-.section-container .section-content li img{display:inline-block;width:100%;vertical-align:top}
 
 
+.btn{text-align: center;width: 10%; height: 30px;
+    border-radius: 50px; 
+    border: none;
+    transition: transform 1s;
+    margin-left: auto; margin-right: auto; display: block;
+    margin-top: 12%; font-family: 'MedievalSharp', cursive;
+    background: linear-gradient(to left, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: background 0.5s ease;
+    color: white}
 
-.btn{text-align: center;width: 150px; height: 50px; border: 1px solid white; border-radius: 50px; background-color:white;  
-    color: white;margin-left: auto;margin-right: auto;transition: transform 1s;}
 .btn:hover{
-    transform: scale(1.1); background-color: gray;;
+    transform: scale(1.1);
+    background-position: right bottom;
+    color: black
 }
+
+img{
+    margin-left:40%; margin-right: 40%;
+    margin-top: 14%;
+    display: block;
+    width : 20%;
+}
+
+
+.clear{
+    clear: both;
+}
+
+
+
 a:hover{ color: white}
 #cursor-dot,#cursor-bg{overflow:hidden;position:fixed;top:50%;left:50%;box-sizing:border-box;
     transform:translateX(-50%) translateY(-50%);pointer-events:none}
@@ -93,3 +89,116 @@ a:hover{ color: white}
     transition:width 200ms ease-in-out,height 200ms ease-in-out,background-color 200ms ease-in-out,border-color 200ms ease-in-out}
 #cursor-bg.active{width:60px;height:60px;background-color:rgba(255,255,255,0.5);border-color:#fff;}
 
+#loader-container {
+    height: 70%;
+    width: 70%;
+    
+  }
+  #loader-container #loader-circle {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height: 45px;
+    width: 45px;
+    background-image: url("https://dl.dropboxusercontent.com/u/90908441/CodePen/logo_2.png");
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    margin: -20px 0 0 -20px;
+    -webkit-animation: circle 2s linear infinite;
+            animation: circle 2s linear infinite;
+  }
+  #loader-container #loader {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: 50%;
+    top: 55%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  #loader-container #circles {
+    height: 100px;
+    width: 100px;
+    border-bottom: 3px solid #535353;
+    border-radius: 50%;
+    -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+  }
+  #loader-container #circles:before {
+    border-top: 3px solid #ffffff;
+    height: 90px;
+    width: 90px;
+    margin: 5px;
+    border-radius: 50%;
+    display: inline-block;
+    content: "";
+    -webkit-animation: spin 4s linear infinite;
+            animation: spin 4s linear infinite;
+  }
+  #loader-container #circles:after {
+    border-left: 3px solid #353535;
+    height: 80px;
+    width: 80px;
+    margin: 15px 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    content: "";
+    -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes circle {
+    0% {
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg);
+    }
+    40% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+  }
+  @keyframes circle {
+    0% {
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg);
+    }
+    40% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+  }
+  
